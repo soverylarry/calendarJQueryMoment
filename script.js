@@ -21,17 +21,51 @@ function buttonStuff (e) {
   if (e.target !== e.currentTarget) {
     //var clickeditem = e.target.id;
     var meetDeets = document.getElementById("mtgDetail1").value;
-    localStorage.setItem("A", JSON.stringify(meetDeets));
+    localStorage.setItem("A", meetDeets);
+    $("#mtgDetail1").append(localStorage.getItem("A"));
   } 
 
    if (e.target !== e.currentTarget) {
     //var clickeditem = e.target.id;
     var meetDeets = document.getElementById("mtgDetail2").value;
-    localStorage.setItem("B", JSON.stringify(meetDeets));
+    localStorage.setItem("B", meetDeets);
   } 
 
+  if (e.target !== e.currentTarget) {
+    //var clickeditem = e.target.id;
+    var meetDeets = document.getElementById("mtgDetail3").value;
+    localStorage.setItem("C", meetDeets);
+  } 
 
+  if (e.target !== e.currentTarget) {
+    //var clickeditem = e.target.id;
+    var meetDeets = document.getElementById("mtgDetail4").value;
+    localStorage.setItem("D", meetDeets);
+  } 
 
+  if (e.target !== e.currentTarget) {
+    //var clickeditem = e.target.id;
+    var meetDeets = document.getElementById("mtgDetail5").value;
+    localStorage.setItem("E", meetDeets);
+  } 
+
+  if (e.target !== e.currentTarget) {
+    //var clickeditem = e.target.id;
+    var meetDeets = document.getElementById("mtgDetail6").value;
+    localStorage.setItem("F", meetDeets);
+  } 
+
+  if (e.target !== e.currentTarget) {
+    //var clickeditem = e.target.id;
+    var meetDeets = document.getElementById("mtgDetail7").value;
+    localStorage.setItem("G", meetDeets);
+  } 
+
+  if (e.target !== e.currentTarget) {
+    //var clickeditem = e.target.id;
+    var meetDeets = document.getElementById("mtgDetail8").value;
+    localStorage.setItem("H", meetDeets);
+  } 
 
   e.stopPropagation();
 }
@@ -39,6 +73,12 @@ function buttonStuff (e) {
 var correctTime = moment().hour();
         var time9 = moment().hour(9).minutes(00).seconds(00);
         var time10 = moment().hour(10).minutes(00).seconds(00);
+        var time11 = moment().hour(11).minutes(00).seconds(00);
+        var time12 = moment().hour(12).minutes(00).seconds(00);
+        var time13 = moment().hour(13).minutes(00).seconds(00);
+        var time14 = moment().hour(14).minutes(00).seconds(00);
+        var time15 = moment().hour(15).minutes(00).seconds(00);
+        var time16 = moment().hour(16).minutes(00).seconds(00);
         function rightColor() {
         if (correctTime > time9) {
             $("box9").addClass("past");
@@ -51,6 +91,97 @@ var correctTime = moment().hour();
             $("box9").addClass("future");
             $("box9").removeClass("present");
             $("box9").removeClass("past");
+        }
+
+        if (correctTime > time10) {
+            $("box10").addClass("past");
+        }
+        else if (correctTime >= time10 && correctTime < time11) {
+            $("box10").addClass("present");
+            $("box10").removeClass("past");
+        }
+        else (correctTime < time10); {
+            $("box10").addClass("future");
+            $("box10").removeClass("present");
+            $("box10").removeClass("past");
+        }
+
+        if (correctTime > time11) {
+            $("box11").addClass("past");
+        }
+        else if (correctTime >= time11 && correctTime < time12) {
+            $("box11").addClass("present");
+            $("box11").removeClass("past");
+        }
+        else (correctTime < time11); {
+            $("box11").addClass("future");
+            $("box11").removeClass("present");
+            $("box11").removeClass("past");
+        }
+
+        if (correctTime > time12) {
+            $("box12").addClass("past");
+        }
+        else if (correctTime >= time12 && correctTime < time13) {
+            $("box12").addClass("present");
+            $("box12").removeClass("past");
+        }
+        else (correctTime < time12); {
+            $("box12").addClass("future");
+            $("box12").removeClass("present");
+            $("box12").removeClass("past");
+        }
+
+        if (correctTime > time13) {
+            $("box13").addClass("past");
+        }
+        else if (correctTime >= time13 && correctTime < time14) {
+            $("box13").addClass("present");
+            $("box13").removeClass("past");
+        }
+        else (correctTime < time13); {
+            $("box13").addClass("future");
+            $("box13").removeClass("present");
+            $("box13").removeClass("past");
+        }
+
+        if (correctTime > time14) {
+            $("box14").addClass("past");
+        }
+        else if (correctTime >= time14 && correctTime < time15) {
+            $("box14").addClass("present");
+            $("box14").removeClass("past");
+        }
+        else (correctTime < time14); {
+            $("box14").addClass("future");
+            $("box14").removeClass("present");
+            $("box14").removeClass("past");
+        }
+
+        if (correctTime > time15) {
+            $("box15").addClass("past");
+        }
+        else if (correctTime >= time15 && correctTime < time16) {
+            $("box15").addClass("present");
+            $("box15").removeClass("past");
+        }
+        else (correctTime < time15); {
+            $("box15").addClass("future");
+            $("box15").removeClass("present");
+            $("box15").removeClass("past");
+        }
+
+        if (correctTime > time16) {
+            $("box16").addClass("past");
+        }
+        else if (correctTime >= time16 && correctTime < time17) {
+            $("box16").addClass("present");
+            $("box16").removeClass("past");
+        }
+        else (correctTime < time16); {
+            $("box16").addClass("future");
+            $("box16").removeClass("present");
+            $("box16").removeClass("past");
         }
 
 }})
