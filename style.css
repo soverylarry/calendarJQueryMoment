@@ -59,10 +59,11 @@ textarea{
 
 .saveBtn {
   border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
   background-color: #06AED5;
   color: white;
+  height: 4em;
 }
 
 .saveBtn.hover {
