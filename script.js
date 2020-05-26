@@ -22,7 +22,6 @@ function buttonStuff (e) {
     //var clickeditem = e.target.id;
     var meetDeets = document.querySelector(".mtgDetail1").value;
     localStorage.setItem("A", meetDeets);
-    
   } 
 
    if (e.target !== e.currentTarget) {
@@ -68,10 +67,46 @@ function buttonStuff (e) {
   } 
 
   e.stopPropagation();
+
 }
 
+let myContentA = localStorage.getItem("A");
+document.querySelector(".box9").innerHTML= myContentA;
+console.log(myContentA);
+
+let myContentB = localStorage.getItem("B");
+document.querySelector(".box10").innerHTML= myContentB;
+console.log(myContentB);
+
+let myContentC = localStorage.getItem("C");
+document.querySelector(".box11").innerHTML= myContentC;
+console.log(myContentC);
+
+let myContentD = localStorage.getItem("D");
+document.querySelector(".box12").innerHTML= myContentD;
+console.log(myContentD);
+
+let myContentE = localStorage.getItem("E");
+document.querySelector(".box13").innerHTML= myContentE;
+console.log(myContentE);
+
+let myContentF = localStorage.getItem("F");
+document.querySelector(".box14").innerHTML= myContentF;
+console.log(myContentF);
+
+let myContentG = localStorage.getItem("G");
+document.querySelector(".box15").innerHTML= myContentG;
+console.log(myContentG);
+
+let myContentH = localStorage.getItem("H");
+document.querySelector(".box16").innerHTML= myContentH;
+console.log(myContentH);
+
+
+
+
 rightColor();
-var correctTime = moment().subtract(11, 'hour');
+var correctTime = moment();
 console.log(correctTime);
 
         var time9 = moment().hour(9).minutes(00).seconds(00);
