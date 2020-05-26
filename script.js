@@ -20,57 +20,60 @@ theParent.addEventListener("click", buttonStuff, false);
 function buttonStuff (e) {
   if (e.target !== e.currentTarget) {
     //var clickeditem = e.target.id;
-    var meetDeets = document.getElementById("mtgDetail1").value;
+    var meetDeets = document.querySelector(".mtgDetail1").value;
     localStorage.setItem("A", meetDeets);
-    $("#mtgDetail1").append(localStorage.getItem("A"));
+    
   } 
 
    if (e.target !== e.currentTarget) {
     //var clickeditem = e.target.id;
-    var meetDeets = document.getElementById("mtgDetail2").value;
+    var meetDeets = document.querySelector(".mtgDetail2").value;
     localStorage.setItem("B", meetDeets);
   } 
 
   if (e.target !== e.currentTarget) {
     //var clickeditem = e.target.id;
-    var meetDeets = document.getElementById("mtgDetail3").value;
+    var meetDeets = document.querySelector(".mtgDetail3").value;
     localStorage.setItem("C", meetDeets);
   } 
 
   if (e.target !== e.currentTarget) {
     //var clickeditem = e.target.id;
-    var meetDeets = document.getElementById("mtgDetail4").value;
+    var meetDeets = document.querySelector(".mtgDetail4").value;
     localStorage.setItem("D", meetDeets);
   } 
 
   if (e.target !== e.currentTarget) {
     //var clickeditem = e.target.id;
-    var meetDeets = document.getElementById("mtgDetail5").value;
+    var meetDeets = document.querySelector(".mtgDetail5").value;
     localStorage.setItem("E", meetDeets);
   } 
 
   if (e.target !== e.currentTarget) {
     //var clickeditem = e.target.id;
-    var meetDeets = document.getElementById("mtgDetail6").value;
+    var meetDeets = document.querySelector(".mtgDetail6").value;
     localStorage.setItem("F", meetDeets);
   } 
 
   if (e.target !== e.currentTarget) {
     //var clickeditem = e.target.id;
-    var meetDeets = document.getElementById("mtgDetail7").value;
+    var meetDeets = document.querySelector(".mtgDetail7").value;
     localStorage.setItem("G", meetDeets);
   } 
 
   if (e.target !== e.currentTarget) {
     //var clickeditem = e.target.id;
-    var meetDeets = document.getElementById("mtgDetail8").value;
+    var meetDeets = document.querySelector(".mtgDetail8").value;
     localStorage.setItem("H", meetDeets);
   } 
 
   e.stopPropagation();
 }
 
-var correctTime = moment().hour();
+rightColor();
+var correctTime = moment().subtract(11, 'hour');
+console.log(correctTime);
+
         var time9 = moment().hour(9).minutes(00).seconds(00);
         var time10 = moment().hour(10).minutes(00).seconds(00);
         var time11 = moment().hour(11).minutes(00).seconds(00);
@@ -79,6 +82,7 @@ var correctTime = moment().hour();
         var time14 = moment().hour(14).minutes(00).seconds(00);
         var time15 = moment().hour(15).minutes(00).seconds(00);
         var time16 = moment().hour(16).minutes(00).seconds(00);
+
         function rightColor() {
         if (correctTime > time9) {
             $("box9").addClass("past");
@@ -183,9 +187,9 @@ var correctTime = moment().hour();
             $("box16").removeClass("present");
             $("box16").removeClass("past");
         }
+}
 
-}})
-
+})
 
 //var timeCompare = parseInt($(this).attr("id"));
 //var currentTime = moment().hours();
